@@ -14,6 +14,7 @@ for ($i = 1; $i <= 100; $i++) {
     }
 }
 
+
 // Q2 多次元連想配列
 $personalInfos = [
     [
@@ -33,14 +34,17 @@ $personalInfos = [
     ],
 ];
 
+
 // 問題1
 echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。';
+
 
 // 問題2
 foreach ($personalInfos as $index => $info) {
     $num = $index + 1;
     echo $num . "番目の" . $info['name'] . "のメールアドレスは" . $info['mail'] .
          "で、電話番号は" . $info['tel'] . "です。" . "<br>";
+
 
 // 問題3
 $ageList = [25, 30, 18];
@@ -50,6 +54,7 @@ foreach ($personalInfos as $index => $info) {
 }
 
 var_dump($personalInfos);
+
 
 // Q3 オブジェクト-1
 class Student
@@ -73,6 +78,7 @@ $student = new Student(120, "山田");
 
 echo "学籍番号" . $student->studentId . "番の生徒は" . $student->studentName . "です。";
 
+
 // Q4 オブジェクト-2
 class Student
 {
@@ -93,6 +99,7 @@ class Student
 
 $yamada = new Student(120, '山田');
 $yamada->attend('PHP');
+
 
 
 // Q5 定義済みクラス

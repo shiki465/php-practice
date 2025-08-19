@@ -3,14 +3,17 @@
 $name = '福倉';
 echo '私の名前は「' . $name . '」です。';
 
+
 // Q2 四則演算
 $num = 5 * 4;
 echo $num;
 echo $num / 2;
 
+
 // Q3 日付操作
 date_default_timezone_set('Asia/Tokyo');
 echo "現在時刻は、" . date("Y年m月d日 H時i分s秒") . "です。";
+
 
 // Q4 条件分岐-1 if文
 $device = "mac"; 
@@ -25,6 +28,7 @@ if ($device == "windows") {
     }
 }
 
+
 // Q5 条件分岐-2 三項演算子
 $age = 18;
 if ($age < 18) {
@@ -33,9 +37,11 @@ if ($age < 18) {
     echo '成人です。';
 }
 
+
 // Q6 配列
 $local = ['東京', '神奈川', '埼玉', '栃木', '千葉']; 
 echo $local[3] . 'と' . $local[4] . 'は関東地方の都道府県です。';
+
 
 // Q7 連想配列-1
 $kantou = [
@@ -51,6 +57,7 @@ $kantou = [
 foreach ($kantou as $city) {
     echo $city . "<br>";
 }
+
 
 // Q8 連想配列-2
 $kantou = [
@@ -68,6 +75,7 @@ foreach ($kantou as $ken => $city) {
         echo $ken . "の県庁所在地は、" . $city . "です。";
     }
 }
+
 
 // Q9 連想配列-3
 $prefectures = [
@@ -92,6 +100,7 @@ foreach ($prefectures as $ken => $city) {
     }
 }
 
+
 // Q10 関数-1
 function hello($name) {
     return $name . "さん、こんにちは。";
@@ -99,6 +108,7 @@ function hello($name) {
 
 echo hello("金谷") . "<br>";
 echo hello("安藤") . "<br>";
+
 
 // Q11 関数-2
 function calcTaxInPrice($price) {
@@ -109,6 +119,7 @@ $price = 1000;
 $taxInPrice = calcTaxInPrice($price);
 
 echo $price . "円の商品の税込価格は" . $taxInPrice . "円です。";
+
 
 // Q12 関数とif文
 function distinguishNum($num) {
@@ -121,6 +132,7 @@ function distinguishNum($num) {
 
 echo distinguishNum(11) . "<br>";
 echo distinguishNum(24) . "<br>";
+
 
 // Q13 関数とswitch文
 function evaluateGrade($grade) {
