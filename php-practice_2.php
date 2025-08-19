@@ -13,6 +13,7 @@ for ($i = 1; $i <= 100; $i++) {
         echo $i . "\n";
     }
 }
+// 出力結果：（省略）
 
 
 // Q2 多次元連想配列
@@ -37,6 +38,7 @@ $personalInfos = [
 
 // 問題1
 echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。';
+// 出力結果：Bさんの電話番号は08033334444です。
 
 
 // 問題2
@@ -44,6 +46,10 @@ foreach ($personalInfos as $index => $info) {
     $num = $index + 1;
     echo $num . "番目の" . $info['name'] . "のメールアドレスは" . $info['mail'] .
          "で、電話番号は" . $info['tel'] . "です。" . "<br>";
+// 出力結果↓
+// 1番目のAさんのメールアドレスはaaa@mail.comで、電話番号は09011112222です。
+// 2番目のBさんのメールアドレスはbbb@mail.comで、電話番号は08033334444です。
+// 3番目のCさんのメールアドレスはccc@mail.comで、電話番号は09055556666です。
 
 
 // 問題3
@@ -54,6 +60,27 @@ foreach ($personalInfos as $index => $info) {
 }
 
 var_dump($personalInfos);
+// 出力結果↓
+// array(3) {
+//   [0]=> array(4) {
+//     ["name"] => string(7) "Aさん"
+//     ["mail"] => string(13) "aaa@mail.com"
+//     ["tel"]  => string(11) "09011112222"
+//     ["age"]  => int(25)
+//   }
+//   [1]=> array(4) {
+//     ["name"] => string(7) "Bさん"
+//     ["mail"] => string(13) "bbb@mail.com"
+//     ["tel"]  => string(11) "08033334444"
+//     ["age"]  => int(30)
+//   }
+//   [2]=> array(4) {
+//     ["name"] => string(7) "Cさん"
+//     ["mail"] => string(13) "ccc@mail.com"
+//     ["tel"]  => string(11) "09055556666"
+//     ["age"]  => int(18)
+//   }
+// }
 
 
 // Q3 オブジェクト-1
@@ -77,6 +104,7 @@ class Student
 $student = new Student(120, "山田");
 
 echo "学籍番号" . $student->studentId . "番の生徒は" . $student->studentName . "です。";
+// 出力結果：学籍番号120番の生徒は山田です。
 
 
 // Q4 オブジェクト-2
@@ -99,7 +127,7 @@ class Student
 
 $yamada = new Student(120, '山田');
 $yamada->attend('PHP');
-
+// 出力結果：山田はPHPの授業に参加しました。学籍番号：12：
 
 
 // Q5 定義済みクラス
@@ -107,10 +135,13 @@ $yamada->attend('PHP');
 $today = new DateTime();
 $oneMonthAgo = (clone $today)->modify('-1 month'); 
 echo $oneMonthAgo->format('Y-m-d') . "<br>";
+// 出力結果：xxxx-xx-xx
+
 
 // 問題2: 
 $past = new DateTime('1992-04-25');
 $diff = $today->diff($past); 
 echo "あの日から" . $diff->days . "日経過しました。";
+// 出力結果：あの日からxxxxx日が経過しました。
 
 ?>
